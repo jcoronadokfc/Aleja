@@ -4,7 +4,7 @@ let cantidadVecesQuerer = 0;
 function mensajes() {
 
     //debugger
-    if (cantidadVecesQuerer > 2) {
+    if (cantidadVecesQuerer > 1) {
 
         Swal.fire({
             title: ':_(',

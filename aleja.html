@@ -20,8 +20,8 @@
 
         .heart-shape {
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
@@ -29,7 +29,6 @@
             transform: rotate(45deg);
             background-color: #cf0203;
             transform: rotate(80deg);
-            float: right;
             margin-left: 75%;
             border: 15px black;
         }
@@ -37,8 +36,8 @@
         .heart-shape:before,
         .heart-shape:after {
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             content: '';
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
@@ -61,35 +60,43 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Rubik:wght@300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body background="https://islamorada.com.co/wp-content/uploads/revslider/home/fachada-islamorada.jpg"
     style=" backdrop-filter: blur(6px);">
-    <div>
-        <div style="float: right;"">
-            <h1 style=" color: white; font-family: 'Oleo Script Swash Caps' , cursive;">Alejandra Agudelo</h1>
-            <img src="img/corazon.png" style="border-radius: 100%;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1 style=" color: white; font-family: 'Oleo Script Swash Caps' , cursive; margin-right: 150px; margin-top: 207px;
+                font-size: 71px;position: absolute;">
+                    Alejandra
+                    Agudelo</h1>
+                <img src="img/corazon.png" style="border-radius: 100%;" height="500PX;">
+            </div>
+            <div class="col-sm">
+                <img src="img/fotos.jpg"
+                    style="transform: rotate(-10deg); height: 500px; margin-left: 100px; margin-top: 50px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm difuminado" style="position: absolute;
+            margin-top: 266px;width: 24%;" >
+                <h3 style="color: white;font-family: 'Oleo Script Swash Caps', cursive;">¿ Te subes o te quedas ? </h3>
+                <button type="button" class="btn btn-outline-success " onclick="mensajes()">¿Segura?</button>
+                <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">¿
+                    No segura?</button>
+            </div>
         </div>
     </div>
     <div>
-        <img src="img/fotos.jpg"
-            style="transform: rotate(-10deg); height: 600px; margin-left: 100px; margin-top: 100px">
     </div>
-    <div>
-        <div style="float: right;margin-right: 346px; width: 220px; height: 92px;" class="difuminado">
-            <h3 style="font-size: 24px;
-            color: white;font-family: 'Oleo Script Swash Caps', cursive;">¿ Te subes o te quedas ? </h3>
-            <button type="button" class="btn btn-outline-danger " onclick="mensajes()">¿Segura?</button>
-            <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">¿
-                No segura?</button>
-        </div>
-        <div class="heart-shape">
-
-        </div>
-
-
-    </div>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
